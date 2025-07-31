@@ -1,0 +1,89 @@
+.navigationbar {
+    background-color: #363636;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    height: 100vh;
+    box-sizing: border-box;
+    color: white;
+}
+
+.header {
+    font-size: 16px;
+    font-weight: regular;
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+}
+
+.navbar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    width: 80%;
+}
+
+button {
+    background-color: transparent;
+    border: 0.25px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 15px 100px 15px 20px;
+    text-align: start;
+}
+
+
+@media (max-width: 768px) {
+    .navigationbar {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        gap: 0px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center; 
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .header, .navbar-profile {
+        display: none; 
+    }
+}

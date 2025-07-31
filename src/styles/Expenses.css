@@ -1,0 +1,8 @@
+.expenses-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #181818;
+    width: 80%;
+    color: white;
+}

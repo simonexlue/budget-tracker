@@ -9,3 +9,15 @@ html, body {
     display: flex;
     height: 100vh;
 }
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    overflow: hidden;
+    background-color: #1e1e1e;
+}

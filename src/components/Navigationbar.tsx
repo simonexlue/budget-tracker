@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../styles/Navigationbar.css';
 
 const Navigationbar: React.FC = () => {
@@ -13,8 +14,8 @@ const Navigationbar: React.FC = () => {
 
             <nav className="sidebar-nav">
                 <button>Dashboard</button>
-                <button>Expenses</button>
-                <button>Income</button>
+                <Link to="/expenses" className="nav-link">Expenses</Link>
+                <Link to="/income" className="nav-link">Income</Link>
                 <button>Budget</button>
             </nav>
         </div>

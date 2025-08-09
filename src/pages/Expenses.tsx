@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Expenses.css';
+import {expenses} from '../data/dummyData';
 
 const Expenses: React.FC = () => {
     return (
@@ -22,19 +23,14 @@ const Expenses: React.FC = () => {
                     <div className="expense-item">DATE</div>
                 </div>
 
-                <div className="expenses-list-row">
-                    <div className="expense-item">Coffee</div>
-                    <div className="expense-item">Food</div>
-                    <div className="expense-item">$3.50</div>
-                    <div className="expense-item">2025-07-31</div>
-                </div>
-
-                <div className="expenses-list-row">
-                    <div className="expense-item">Coffee</div>
-                    <div className="expense-item">Food</div>
-                    <div className="expense-item">$3.50</div>
-                    <div className="expense-item">2025-07-31</div>
-                </div>
+                {expenses.map(expense => (
+                    <div className="expenses-list-row" key={expense.id}>
+                        <div className="expense-item">{expense.details}</div>
+                        <div className="expense-item">{expense.category}</div>
+                        <div className="expense-item">${expense.amount.toFixed(2)}</div>
+                        <div className="expense-item">{expense.date}</div>
+                    </div>
+                ))}
             </div>
         </div>
     );

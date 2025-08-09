@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Income.css';
+import {income} from '../data/dummyData';
 
 const Income: React.FC = () => {
     return (
@@ -22,19 +23,14 @@ const Income: React.FC = () => {
                     <div className="income-item">DATE</div>
                 </div>
 
-                <div className="income-list-row">
-                    <div className="income-item">Salary</div>
-                    <div className="income-item">Job</div>
-                    <div className="income-item">$3000.00</div>
-                    <div className="income-item">2025-07-31</div>
-                </div>
-
-                <div className="income-list-row">
-                    <div className="income-item">Freelance Work</div>
-                    <div className="income-item">Side Job</div>
-                    <div className="income-item">$500.00</div>
-                    <div className="income-item">2025-07-31</div>
-                </div>
+                {income.map(income => (
+                    <div className="income-list-row" key={income.id}>
+                        <div className="income-item">{income.details}</div>
+                        <div className="income-item">{income.category}</div>
+                        <div className="income-item">${income.amount.toFixed(2)}</div>
+                        <div className="income-item">{income.date}</div>
+                    </div>
+                ))}
             </div>
         </div>
     );

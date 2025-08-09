@@ -13,10 +13,10 @@ const Navigationbar: React.FC = () => {
             </div>
 
             <nav className="sidebar-nav">
-                <button>Dashboard</button>
+                <Link to="/dashboard" className="nav-link">Dashboard</Link>
                 <Link to="/expenses" className="nav-link">Expenses</Link>
                 <Link to="/income" className="nav-link">Income</Link>
-                <button>Budget</button>
+                <Link to="/budgets" className="nav-link">Budgets</Link>
             </nav>
         </div>
         
